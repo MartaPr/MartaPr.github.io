@@ -17,24 +17,23 @@ document.getElementById('add').addEventListener('click', function(){
 
     let value = document.getElementById('item').value;
     if (value) {
-        addItemToDo(value);
-        document.getElementById('item').value = '';
-
-        data.todo.push(value);
-        dataObjectUpdated();
+        addItem(value);
      }
 });
 
 document.getElementById('item').addEventListener('keydown', function(e) {
  let value = this.value;
  if (e.code === 'Enter' && value) {
-    addItemToDo(value);
-    document.getElementById('item').value = '';
-
-    data.todo.push(value);
-    dataObjectUpdated();
+    addItem(value);
  }
 });
+
+function addItem(value) {
+    addItemToDo(value);
+    document.getElementById('item').value = '';
+    data.todo.push(value);
+    dataObjectUpdated();
+}
 
 function renderTodoList() {
     if (!data.todo.length && !data.completed.length) return;

@@ -3,6 +3,7 @@
 body {
     background: #F7EBE8;
     padding: 90px 0 0 0;
+    box-sizing: border-box;
 }
 
 body, input, button {
@@ -223,7 +224,7 @@ ul.todo li .buttons button.complete svg .fill {
 }
 
 /* ul.todo#completed{
-    position: relative;
+    
     padding: 60px 0 0 0;
 } */
 
